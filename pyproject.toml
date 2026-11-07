@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-prompt-taint-tracker"
+version = "0.1.0"
+description = "Information flow taint tracker tagging untrusted web scraping inputs and preventing tainted execution in shell commands"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-prompt-taint-tracker = "agent_prompt_taint_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_prompt_taint_tracker*"]
